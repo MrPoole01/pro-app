@@ -1,8 +1,11 @@
 <template>
   <div id="nav" class="nav">
-    <router-link class="brand" to="/">Real Events</router-link>
+    <router-link class="brand" to="/">
+      <i class="fas fa-stream"></i> Real Events
+    </router-link>
     <nav>
-      <router-link :to="{name: 'event-list'}">List</router-link>|
+      <router-link :to="{name: 'event-list'}">List</router-link>
+      <i class="fas fa-grip-lines-vertical"></i>
       <router-link :to="{name: 'event-create'}">Create</router-link>
     </nav>
   </div>
@@ -20,7 +23,12 @@ export default {};
   height: 60px;
 
   a {
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5rem 0 0.4rem;
+    text-decoration: none;
+  }
+
+  i {
+    color: #39b982;
   }
 }
 .nav > .brand {
