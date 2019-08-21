@@ -6,6 +6,9 @@ import router from "./router";
 import store from "./store/store";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+import DateFilter from "./filters/date"; // Import date
+
+Vue.filter("date", DateFilter); // register filter globally
 
 const requireComponent = require.context(
   "./components",
