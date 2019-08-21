@@ -7,13 +7,13 @@ export const state = {
   notifications: []
 };
 
-let nextID = 1;
+let nextId = 1;
 
 export const mutations = {
   PUSH(state, notification) {
     state.notifications.push({
       ...notification,
-      id: nextID++
+      id: nextId++
     });
   },
   DELETE(state, notificationToRemove) {

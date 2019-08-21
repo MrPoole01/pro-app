@@ -34,14 +34,14 @@ export const actions = {
           type: "sucess",
           message: "Your event has been created"
         };
-        dispatch("notifiaction/add", notification, { root: true });
+        dispatch("notification/add", notification, { root: true });
       })
       .catch(error => {
         const notification = {
           type: "error",
           message: "There was a problem creating the event: " + error.message
         };
-        dispatch("notifiaction/add", notification, { root: true });
+        dispatch("notification/add", notification, { root: true });
         throw error;
       });
   },
@@ -56,7 +56,7 @@ export const actions = {
           type: "error",
           message: "There was a problem fetching events: " + error.message
         };
-        dispatch("notifiaction/add", notification, { root: true });
+        dispatch("notification/add", notification, { root: true });
       });
   },
   fetchEvent({ commit, getters, dispatch }, id) {
@@ -74,7 +74,7 @@ export const actions = {
             type: "error",
             message: "There was a problem fetching event: " + error.message
           };
-          dispatch("notifiaction/add", notification, { root: true });
+          dispatch("notification/add", notification, { root: true });
         });
     }
   }
